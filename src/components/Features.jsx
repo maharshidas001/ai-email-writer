@@ -24,7 +24,7 @@ const Features = () => {
 
   return (
     <>
-      <section>
+      <section className='pb-7'>
         <MaxWidth>
           <div>
             <h2 className='text-center text-4xl font-bold'>Features</h2>
@@ -33,7 +33,7 @@ const Features = () => {
                 featuresDetails.map(fe => {
                   return <div className='w-60 rounded-md bg-primary-foreground p-5 flex flex-col items-center border border-primary' key={fe.feName}>
                     {fe.feIcon}
-                    <p className='text-xl font-bold mt-2'>{fe.feName}</p>
+                    <h3 className='text-xl font-bold mt-2'>{fe.feName}</h3>
                     <p className='text-center'>{fe.fePara}</p>
                   </div>
                 })
