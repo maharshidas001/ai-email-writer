@@ -33,8 +33,12 @@ const Signup = () => {
     <>
       <section>
         <MaxWidth className='flex justify-between py-2'>
-          <div className='w-[45%] h-[500px] border'>Left</div>
-          <div className='w-[45%] h-[500px] grid place-items-center'>
+          <div className='w-[45%]' style={{
+            height: 'calc(100vh - 16px)'
+          }}>Left</div>
+          <div className='w-[45%] grid place-items-center' style={{
+            height: 'calc(100vh - 16px)'
+          }}>
             <form className='w-full' onSubmit={handleLoginForm}>
               <h2 className='text-3xl font-bold'>Welcome to AER. 🤩</h2>
               <div className='mt-4'>

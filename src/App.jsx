@@ -7,6 +7,7 @@ import WithoutHeader from '@/layouts/WithoutHeader';
 import Dashboard from '@/pages/Dashboard';
 import Login from '@/pages/Login';
 import Signup from '@/pages/Signup';
+import DashboardLayout from '@/layouts/DashboardLayout';
 
 const App = () => {
   return (
@@ -18,7 +19,9 @@ const App = () => {
         </Route>
 
         <Route path="/" element={<WithoutHeader />}>
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/' element={<DashboardLayout />}>
+            <Route path='/dashboard' element={<Dashboard />} />
+          </Route>
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
         </Route>

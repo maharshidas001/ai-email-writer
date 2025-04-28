@@ -33,8 +33,12 @@ const Login = () => {
     <>
       <section>
         <MaxWidth className='flex justify-between py-2'>
-          <div className='w-[45%] h-[500px] border'>Left</div>
-          <div className='w-[45%] h-[500px] grid place-items-center'>
+          <div className='w-[45%]' style={{
+            height: 'calc(100vh - 16px)'
+          }}>Left</div>
+          <div className='w-[45%] grid place-items-center' style={{
+            height: 'calc(100vh - 16px)'
+          }}>
             <form className='w-full' onSubmit={handleLoginForm}>
               <h2 className='text-3xl font-bold'>Welcome Back 🙏</h2>
               <div className='mt-4'>
@@ -42,7 +46,7 @@ const Login = () => {
                 <Input type='email' placeholder='example@mymail.com' className='w-full max-w-96' onChange={(e) => handleInputChange('email', e.target.value)} />
               </div>
               <div className='mt-2'>
-                <label htmlFor="">Password</label>
+                <label>Password</label>
                 <div className='flex gap-2'>
                   <Input type={showPassword ? 'text' : 'password'} placeholder='**********' className='w-full max-w-96' onChange={(e) => handleInputChange('password', e.target.value)} />
                   <Button variant='outline' onClick={() => setShowPassword(!showPassword)}>
