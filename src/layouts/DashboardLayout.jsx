@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 const DashboardLayout = ({ children }) => {
   return (
     <>
-      <section className='p-2 flex'>
+      <section className='p-2 flex justify-between gap-2'>
         <Sidebar />
         {children}
         <Outlet />
