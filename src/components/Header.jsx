@@ -19,7 +19,9 @@ const Header = () => {
               <ul className='flex gap-2'>
                 <Link to={'/pricing'}><li className='cursor-pointer'>Pricing</li></Link>
               </ul>
-              <Button className='cursor-pointer'>Login</Button>
+              <Link to={'/login'}>
+                <Button className='cursor-pointer'>Login</Button>
+              </Link>
             </div>
           </nav>
         </MaxWidth>

@@ -26,6 +26,7 @@ li,
 button,
 input,
 textarea,
+label,
 div {
   font-family: 'Open Sans', sans-serif;
 }

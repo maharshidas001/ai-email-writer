@@ -3,8 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import WithHeader from '@/layouts/WithHeader';
 import Home from '@/pages/Home';
 import Pricing from '@/pages/Pricing';
-import WithoutHeader from './layouts/WithoutHeader';
-import Dashboard from './pages/Dashboard';
+import WithoutHeader from '@/layouts/WithoutHeader';
+import Dashboard from '@/pages/Dashboard';
+import Login from '@/pages/Login';
+import Signup from '@/pages/Signup';
 
 const App = () => {
   return (
@@ -15,8 +17,10 @@ const App = () => {
           <Route path='/pricing' element={<Pricing />} />
         </Route>
 
-        <Route path="/dashboard" element={<WithoutHeader />}>
-          <Route index element={<Dashboard />} />
+        <Route path="/" element={<WithoutHeader />}>
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
         </Route>
       </Routes>
     </>

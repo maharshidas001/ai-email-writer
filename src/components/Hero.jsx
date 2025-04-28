@@ -1,6 +1,7 @@
 import React from 'react';
 import MaxWidth from './MaxWidth';
 import { Button } from './ui/button';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -11,7 +12,9 @@ const Hero = () => {
             <h1 className='text-center text-7xl font-bold '>Write Better Emails, <br /> <span className='text-primary font-work'>Instantly</span> With AI</h1>
             <p className='text-center mt-4'>Craft professional, engaging emails in seconds. Save time. Communicate smarter.</p>
             <div className='flex justify-center mt-8'>
-              <Button variant='outline'>Start Writing</Button>
+              <Link to='/signup'>
+                <Button variant='outline'>Start Writing</Button>
+              </Link>
             </div>
           </div>
         </MaxWidth>
