@@ -3,6 +3,7 @@ import NothingMessage from '@/components/NothingMessage';
 import { Button } from '@/components/ui/button';
 import { Plus, Trash } from 'lucide-react';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
 
@@ -12,7 +13,7 @@ const Dashboard = () => {
     <>
       <div className='w-full p-2 bg-white border rounded-xl !max-h-screen'>
         <div className='flex gap-2'>
-          <Button variant='outline'><Plus /> Create Email</Button>
+          <Link to='/create'><Button variant='outline'><Plus /> Create Email</Button></Link>
           <Button variant='outline' disabled={!selectItems.length == 0 ? false : true}><Trash /> Delete</Button>
         </div>
 
@@ -22,7 +23,7 @@ const Dashboard = () => {
         {/* If there isn't any emails */}
         <div className='py-30'>
           <NothingMessage message='No Email Available' />
-          <p className='text-center'>Create a new email just by clicking the "Creat Email" Button.</p>
+          <p className='text-center'>Create a new email just by clicking the "Create Email" Button.</p>
         </div>
 
         {/* If email */}

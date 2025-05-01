@@ -1,5 +1,6 @@
 import { LayoutDashboard, Plus, Settings, SidebarIcon } from 'lucide-react';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
 
@@ -8,15 +9,18 @@ const Sidebar = () => {
   let sidebarOptins = [
     {
       name: 'Dashboard',
-      icon: <LayoutDashboard />
+      icon: <LayoutDashboard />,
+      link: '/dashboard',
     },
     {
       name: 'Create Email',
-      icon: <Plus />
+      icon: <Plus />,
+      link: '/create',
     },
     {
       name: 'Setting',
-      icon: <Settings />
+      icon: <Settings />,
+      link: '/setting',
     },
   ];
 
@@ -26,14 +30,16 @@ const Sidebar = () => {
         height: 'calc(100vh - 16px)'
       }}>
         <div className='p-2'>
-          <SidebarIcon size={24} className='text-white cursor-pointer' onClick={() => setShowSidebar(!showSidebar)} />
+          <p><SidebarIcon size={24} className='text-white cursor-pointer' onClick={() => setShowSidebar(!showSidebar)} /></p>
         </div>
         <div>
           {sidebarOptins.map((opt, ind) => {
-            return <div className='flex gap-3 cursor-pointer text-white hover:text-black hover:bg-white p-2 rounded-xl transition' key={ind}>
-              <p>{opt.icon}</p>
-              {showSidebar ? <p>{opt.name}</p> : ''}
-            </div>
+            return <Link to={opt.link} key={ind}>
+              <div className='flex gap-3 cursor-pointer text-white hover:text-black hover:bg-white p-2 rounded-md transition'>
+                <p>{opt.icon}</p>
+                {showSidebar ? <p>{opt.name}</p> : ''}
+              </div>
+            </Link>
           })}
         </div>
       </div>
