@@ -8,7 +8,8 @@ import Dashboard from '@/pages/Dashboard';
 import Login from '@/pages/Login';
 import Signup from '@/pages/Signup';
 import DashboardLayout from '@/layouts/DashboardLayout';
-import CreateEmail from './pages/CreateEmail';
+import CreateEmail from '@/pages/CreateEmail';
+import Email from '@/pages/Email';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path='/' element={<DashboardLayout />}>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/create' element={<CreateEmail />} />
+            <Route path='/email/:emailID' element={<Email />} />
           </Route>
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
