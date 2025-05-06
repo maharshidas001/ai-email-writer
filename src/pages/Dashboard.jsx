@@ -27,7 +27,9 @@ const Dashboard = () => {
         </div>
 
         {/* If email */}
-        <div className='mt-2 grid gap-2 overflow-y-scroll self-start'></div>
+        <div className='mt-2 grid gap-2 overflow-y-scroll scroll-auto self-start' style={{
+          maxHeight: 'calc(100vh - 94px)'
+        }}></div>
       </div>
     </>
   )
