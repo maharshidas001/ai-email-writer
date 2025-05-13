@@ -16,7 +16,12 @@ class AppwriteAuth {
   // Create a user with email and password
   async createUser({ email, password, name }) {
     try {
-      const res = await this.account.create(ID.unique(), email, password, name);
+      const res = await this.account.create(
+        ID.unique(),
+        email,
+        password,
+        name
+      );
       return res;
     } catch (error) {
       throw new Error(error);
@@ -26,7 +31,10 @@ class AppwriteAuth {
   // Login user with email and password
   async loginUser({ email, password }) {
     try {
-      const res = await this.account.createEmailPasswordSession(email, password);
+      const res = await this.account.createEmailPasswordSession(
+        email,
+        password
+      );
       return res;
     } catch (error) {
       throw new Error(error);
